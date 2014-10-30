@@ -1,3 +1,5 @@
+![Status](http://img.shields.io/badge/STATUS-Incomplete-red.svg)
+
 # What?
 Custom module for Nucleus. It watches a directory and a url and revert back changes done in the directory when url crashes. Directory must be containing meteor app which is running on url.
 
@@ -31,3 +33,4 @@ Options:
   Url at which the app is running
 - `-w`
   Time in milliseconds to wait between changes. When one change in app's code is detected, it waits for XXX milliseconds for next change to occur; if another change occurs in XXX milliseconds, it postpone crash detection till it gets a clean XXX time interval.
+
