@@ -1,0 +1,21 @@
+{
+  "name": "nuc-watch-meteor",
+  "version": "0.0.1",
+  "description": "Custom module for Nucleus. It watches a directory and a url and revert back changes done in the directory when url crashes. Directory must be containing meteor app which is running on url",
+  "scripts": {
+    "test": "mocha ./tests"
+  },
+  "bin": {
+    "nuc-watch-meteor": "./bin/nuc-watch-meteor"
+  },
+  "dependencies": {
+    "commander": "latest",
+    "watch": "latest"
+  },
+  "keywords": [
+    "nucleus"
+  ],
+  "author": "ckhabra@gmail.com (https://channikhabra.github.io/)",
+  "git": "https://github.com/channikhabra/nuc-watch-meteor",
+  "license": "MIT"
+}
