@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "commander": "latest",
+    "ncp": "^1.0.1",
     "shelljs": "latest",
     "watch": "latest"
   },
