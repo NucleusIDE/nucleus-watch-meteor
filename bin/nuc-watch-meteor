@@ -28,18 +28,19 @@ var dir = /~/.test(dir) ? path.resolve(dir.replace('~',process.env.HOME)) : path
     url = cli.url.indexOf("http") === 0 ? cli.url : "http://"+cli.url,
     project_name = cli.project;
 
-var demon = new backup_demon.Backup_Demon({app_dir: dir, project_name: project_name});
+var backup = new backup_demon.Backup_Demon({app_dir: dir, project_name: project_name});
 
-demon.setup();
+backup.setup();
 
 var watcher = new Watcher(dir, url);
 
 watcher.start_watching(function(file) {
   app_inspector.if_crashed(url, function() {
     console.log("APP IS CRASHING ﴾͡๏̯͡๏﴿");
-    demon.revert_to_clean();
+    // backup.revert_to_clean();
+    backup.revert_file(file);
   }, function() {
     //on every non-crashing change, we make a commit to our backup branch
-    demon.clean_commit(file);
+    backup.clean_commit(file);
   });
 });
