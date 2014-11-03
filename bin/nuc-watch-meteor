@@ -10,23 +10,18 @@ cli
   .version("0.0.1")
   .option("-d, --dir <dir>", "Directory to watch changes in")
   .option("-u, --url <url>", "Url where meteor app is running")
-  .option("-p, --project <project>","Name of the project")
   .option("-w, --wait <n>","Wait time in milliseconds", parseInt)
-  .option("-t, --test","Bla bla bla")
   .parse(process.argv);
 
-if(cli.test) {
 
-}
-
-if (! cli.dir || ! cli.url || ! cli.project) {
+if (! cli.dir || ! cli.url) {
   cli.help();
 }
 
 var dir = /~/.test(dir) ? path.resolve(dir.replace('~',process.env.HOME)) : path.resolve(cli.dir),
     wait = cli.wait || 2000,
     url = cli.url.indexOf("http") === 0 ? cli.url : "http://"+cli.url,
-    project_name = cli.project;
+    project_name = path.basename(dir);
 
 var backup = new backup_demon.Backup_Demon({app_dir: dir, project_name: project_name});
 
