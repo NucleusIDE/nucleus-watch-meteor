@@ -1,5 +1,3 @@
-![Status](http://img.shields.io/badge/STATUS-Incomplete-red.svg)
-
 # What?
 Custom module for Nucleus. It watches a directory and a url and revert back changes done in the directory when url crashes. Directory must be containing meteor app which is running on url.
 
