@@ -4,15 +4,16 @@ var cli = require("commander"),
     path = require("path"),
     Watcher = require("../lib/fs_watcher").Watcher,
     app_inspector = require("../lib/app_crash_inspector.js"),
-    backup_demon = require("../lib/backup_demon.js");
+    backup_demon = require("../lib/backup_demon.js"),
+    args = process.argv.filter(function(a) {return !!a;});
+
 
 cli
   .version("0.0.1")
   .option("-d, --dir <dir>", "Directory to watch changes in")
   .option("-u, --url <url>", "Url where meteor app is running")
   .option("-w, --wait <n>","Wait time in milliseconds", parseInt)
-  .parse(process.argv);
-
+  .parse(args);
 
 if (! cli.dir || ! cli.url) {
   cli.help();
