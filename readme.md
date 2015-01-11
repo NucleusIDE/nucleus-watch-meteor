@@ -11,7 +11,7 @@ I don't think so. I am not publishing this over `npm` for this very reason. I do
 
 ## Install
 ```sh
-npm install -g https://github.com/channikhabra/nuc-watch-meteor
+npm install -g https://github.com/nucleuside/nucleus-watch-meteor
 ```
 ## Usage
 
