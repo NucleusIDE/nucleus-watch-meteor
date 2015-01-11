@@ -15,7 +15,7 @@ npm install -g https://github.com/nucleuside/nucleus-watch-meteor
 ```
 ## Usage
 
-`nuc-watch-meteor [options]`
+`nucleus-watch-meteor [options]`
 
 Options:  
 
