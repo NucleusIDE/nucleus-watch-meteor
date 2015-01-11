@@ -1,12 +1,12 @@
 {
-  "name": "nuc-watch-meteor",
-  "version": "0.0.1",
+  "name": "nucleus-watch-meteor",
+  "version": "0.0.2",
   "description": "Custom module for Nucleus. It watches a directory and a url and revert back changes done in the directory when url crashes. Directory must be containing meteor app which is running on url",
   "scripts": {
     "test": "mocha ./tests"
   },
   "bin": {
-    "nuc-watch-meteor": "./bin/nuc-watch-meteor"
+    "nucleus-watch-meteor": "./bin/nucleus-watch-meteor"
   },
   "dependencies": {
     "commander": "latest",
