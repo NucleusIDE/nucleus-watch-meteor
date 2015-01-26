@@ -37,6 +37,6 @@ watcher.start_watching(function(file) {
     backup.revert_file(file);
   }, function() {
     //on every non-crashing change, we make a commit to our backup branch
-    backup.clean_commit(file);
+    backup.clean_backup(file);
   });
 });
