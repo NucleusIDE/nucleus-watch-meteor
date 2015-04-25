@@ -32,7 +32,7 @@ var watcher = new Watcher(dir, url);
 
 watcher.start_watching(function(file) {
   app_inspector.if_crashed(url, function() {
-    console.log("APP IS CRASHING ﴾͡๏̯͡๏﴿");
+    console.log("APP IS CRASHING ಠ_ಠ");
     // backup.revert_to_clean();
     backup.revert_file(file);
   }, function() {
